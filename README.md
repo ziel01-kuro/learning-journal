@@ -1,5 +1,5 @@
 # learning-journal
-Learning journal for studying Reverse Engineering
+Jurnal untuk mempelajari Reverse Engineering
 
 
 Repository ini dibuat sebagai dokumentasi dan catatan belajar mingguan (learning journal) untuk pembelajaran Reverse Engineering. Fokus utamanya adalah mendokumentasikan perjalanan, perkembangan logika, serta refleksi pribadi dalam memahami Reverse Engineering.
