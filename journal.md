@@ -22,3 +22,12 @@
 - **Topik:** Struktur Header File PE dan Pustaka Impor (DLL)
 - **Apa yang Dipahami:** Saya telah mempelajari struktur dasar file Portable Executable (PE), terutama bagian DOS Header, PE Header, dan Section Table (.text, .data, .rsrc). Mengetahui fungsi apa saja yang diimpor oleh aplikasi melalui Import Address Table (IAT) sangat membantu untuk menebak kapabilitas program sebelum membongkar kodenya.
 - **Apa yang Masih Bingung:** Memahami pemetaan alamat dari *File Offset* (posisi di harddisk) ke *Relative Virtual Address / RVA* (posisi saat dimuat di memori RAM) masih terasa rumit dan membutuhkan ketelitian matematis. Saya masih merasa saya belum paham apa-apa disini dan seperti meraba-raba.
+
+---
+
+# Entri Jurnal 04: Analisis Statis vs Dinamis & Validasi Input Integer
+
+- **Tanggal Log:** 5 Juli 2026
+- **Topik:** Pembedahan biner Linux ELF (01-chaltu-access-me) menggunakan ltrace dan Ghidra untuk memahami validasi kata sandi berbasis integer.
+- **Apa yang Dipahami:** Saya mempelajari dasar-dasar dari assembly, memahami cara kerja bahasa pemrograman C, dan juga logika pemecahan challenge crackme pemula. Saya belajar bahwa Assembly merupakan intruksi yang dieksekusi oleh CPU yang diterjemah ke bahasa pemrograman supaya manusia dapat mengerti lebih mudah tentang program tersebut. Saya belajar kantong register seperti RAX, RSI, RDX, dan RSI. Kemudian saya mengerti bahwa penting untuk kita memahami juga dasar-dasar dari Assembly untuk Reverse Engineering, tidak hanya belajar bahasa pemrogramannya saja. Melalui dekompilator Ghidra, saya memahami betapa pentingnya memeriksa tipe data pada deklarasi variabel (seperti int local_14); tipe data ini menjadi petunjuk utama bahwa fungsi scanf menggunakan format string %d (desimal), yang mengubah arah analisis dari pencarian teks string menjadi perhitungan konversi bilangan heksadesimal 0xb7b5 ke desimal 47029.
+- **Apa yang Masih Bingung:** Saya masih merasa kebingungan dengan aturan Calling Convention pada arsitektur x86_64, terutama bagaimana prosesor menentukan kapan harus menggunakan register RDI, RSI, atau RDX saat menyusun argumen sebelum fungsi seperti scanf dipanggil. Saya juga masih perlu membiasakan diri membaca struktur assembly pada Ghidra agar tidak mudah bingung saat melihat nama-nama variabel acak seperti DAT_00102024 yang dihasilkan oleh compiler.
